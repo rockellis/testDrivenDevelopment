@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ecaaf960-6532-47f7-aca2-2a80c13943a9" activeEnvironment="Default" name="redhatinboundtest" resourceRoot="" soapui-version="5.2.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="ac15fd86-fc66-4d9b-b5fb-e8c09ad97b0b" wsaVersion="NONE" name="MobDataEngPushItfHTTPBinding" type="wsdl" bindingName="{http://www.cognitomobile.com/services/Iface/Engine/MobDataEngPushItf}MobDataEngPushItfHTTPBinding" soapVersion="1_1" anonymous="optional" definition="https://10.251.1.7:3433?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://10.251.1.7:3433?wsdl"><con:part><con:url>https://10.251.1.7:3433?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.cognitomobile.com/services/Iface/Engine/MobDataEngPushItf" xmlns:s0="http://www.cognitomobile.com/schemas/Iface/MobDataEngPushItf/InterfaceIO.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.cognitomobile.com/services/Iface/Engine/MobDataEngPushItf" xmlns:s1="http://www.cognitomobile.com/schemas/Common/Mobile/Msg.xsd" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s2="http://www.cognitomobile.com/schemas/Common/Errors.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.cognitomobile.com/schemas/Iface/MobDataEngPushItf/InterfaceIO.xsd">
+      <s:import namespace="http://www.cognitomobile.com/schemas/Common/Mobile/Msg.xsd"/>
+      <s:import namespace="http://www.cognitomobile.com/schemas/Common/Errors.xsd"/>
+      <s:element name="ReceiveMobDataParams">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Grouping">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="GroupingID" type="s:string"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="Order" type="s:int"/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:Msg"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveMobDataReturn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Details" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="Exception">
+              <s:complexType>
+                <s:sequence>
+                  <s:choice minOccurs="1" maxOccurs="1">
+                    <s:element minOccurs="0" maxOccurs="1" ref="s2:CogErrResourceUnavailable"/>
+                    <s:element minOccurs="0" maxOccurs="1" ref="s2:CogErrUnexpected"/>
+                  </s:choice>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveMobDataStatusParams">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Grouping">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="GroupingID" type="s:string"/>
+                  <s:element minOccurs="1" maxOccurs="1" name="ActionType" type="s:int"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="Order" type="s:int"/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:Status"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveMobDataStatusReturn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Details" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="Exception">
+              <s:complexType>
+                <s:sequence>
+                  <s:choice minOccurs="1" maxOccurs="1">
+                    <s:element minOccurs="0" maxOccurs="1" ref="s2:CogErrResourceUnavailable"/>
+                    <s:element minOccurs="0" maxOccurs="1" ref="s2:CogErrUnexpected"/>
+                  </s:choice>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="receiveAuthParams">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveAuthReturn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Authorised" type="s:boolean"/>
+            <s:element minOccurs="0" maxOccurs="1" name="pwExpiry" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="LaborCode" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.cognitomobile.com/schemas/Common/Mobile/Msg.xsd">
+      <s:element name="Msg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Head">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="Times">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="Sent" type="s:dateTime"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="Networked" type="s:dateTime"/>
+                        <s:element minOccurs="0" maxOccurs="unbounded" name="Trace">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="1" maxOccurs="1" name="SvcId" type="s:unsignedInt"/>
+                              <s:element minOccurs="1" maxOccurs="1" name="Recv" type="s:dateTime"/>
+                              <s:element minOccurs="0" maxOccurs="1" name="Fwd" type="s:dateTime"/>
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" name="From">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="UA" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="Custom">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:any/>
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Env">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="To">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:choice minOccurs="1" maxOccurs="1">
+                          <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string"/>
+                          <s:element minOccurs="0" maxOccurs="1" name="Custom">
+                            <s:complexType>
+                              <s:sequence>
+                                <s:any/>
+                              </s:sequence>
+                            </s:complexType>
+                          </s:element>
+                          <s:element minOccurs="0" maxOccurs="1" name="UA" type="s:string"/>
+                        </s:choice>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" name="Content">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:any/>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="version" type="s:string"/>
+        </s:complexType>
+      </s:element>
+      <s:element name="Status">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Head">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="Times">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="Sent" type="s:dateTime"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="Networked" type="s:dateTime"/>
+                        <s:element minOccurs="0" maxOccurs="unbounded" name="Trace">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="1" maxOccurs="1" name="SvcId" type="s:unsignedInt"/>
+                              <s:element minOccurs="1" maxOccurs="1" name="Recv" type="s:dateTime"/>
+                              <s:element minOccurs="0" maxOccurs="1" name="Fwd" type="s:dateTime"/>
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" name="From">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="UA" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="Custom">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:any/>
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="StatusContent">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="StatusString" type="s:string"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="ReasonCode" type="s:string"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="ReasonString" type="s:string"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="ErrLineNum" type="s:unsignedInt"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="ErrDataStr" type="s:string"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="ErrCode" type="s:unsignedInt"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="SvcId" type="s:unsignedInt"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="InterfaceId" type="s:unsignedInt"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="Extra">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:any/>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+                <s:attribute name="version" type="s:string"/>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.cognitomobile.com/schemas/Common/Errors.xsd">
+      <s:element name="CogErrResourceUnavailable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrInfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="1" maxOccurs="1" name="TimeDateOccurred" type="s:dateTime"/>
+                  <s:element minOccurs="1" maxOccurs="1" name="SuggRetryBaseSecs" type="s:unsignedInt"/>
+                  <s:element minOccurs="1" maxOccurs="1" name="SuggRetryRandSecs" type="s:unsignedInt"/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CogErrUnexpected">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrInfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="1" maxOccurs="1" name="TimeDateOccurred" type="s:dateTime"/>
+                  <s:element minOccurs="1" maxOccurs="1" name="SuggRetryBaseSecs" type="s:unsignedInt"/>
+                  <s:element minOccurs="1" maxOccurs="1" name="SuggRetryRandSecs" type="s:unsignedInt"/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ReceiveMobDataOpSoapIn">
+    <wsdl:part name="receiveMobDataParams" element="s0:ReceiveMobDataParams"/>
+  </wsdl:message>
+  <wsdl:message name="ReceiveMobDataOpSoapOut">
+    <wsdl:part name="ReceiveMobDataOpResult" element="s0:ReceiveMobDataReturn"/>
+  </wsdl:message>
+  <wsdl:message name="ReceiveMobDataStatusOpSoapIn">
+    <wsdl:part name="receiveMobDataStatusParams" element="s0:ReceiveMobDataStatusParams"/>
+  </wsdl:message>
+  <wsdl:message name="ReceiveMobDataStatusOpSoapOut">
+    <wsdl:part name="ReceiveMobDataStatusOpResult" element="s0:ReceiveMobDataStatusReturn"/>
+  </wsdl:message>
+  <wsdl:message name="ReceiveAuthoriseSoapIn">
+    <wsdl:part name="receiveAuthParams" element="s0:receiveAuthParams"/>
+  </wsdl:message>
+  <wsdl:message name="ReceiveAuthoriseSoapOut">
+    <wsdl:part name="ReceiveAuthoriseResult" element="s0:ReceiveAuthReturn"/>
+  </wsdl:message>
+  <wsdl:portType name="MobDataEngPushItfHTTPBinding">
+    <wsdl:operation name="ReceiveMobDataOp">
+      <wsdl:input message="tns:ReceiveMobDataOpSoapIn"/>
+      <wsdl:output message="tns:ReceiveMobDataOpSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMobDataStatusOp">
+      <wsdl:input message="tns:ReceiveMobDataStatusOpSoapIn"/>
+      <wsdl:output message="tns:ReceiveMobDataStatusOpSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveAuthorise">
+      <wsdl:input message="tns:ReceiveAuthoriseSoapIn"/>
+      <wsdl:output message="tns:ReceiveAuthoriseSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MobDataEngPushItfHTTPBinding" type="tns:MobDataEngPushItfHTTPBinding">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ReceiveMobDataOp">
+      <soap:operation soapAction="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/ReceiveMobDataOp" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMobDataStatusOp">
+      <soap:operation soapAction="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/Cog/MobDataEndPushItf/ReceiveMobDataStatusOp" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveAuthorise">
+      <soap:operation soapAction="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/ReceiveMobDataOp" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MobDataEngPushItfHTTPBinding1" type="tns:MobDataEngPushItfHTTPBinding">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ReceiveMobDataOp">
+      <soap12:operation soapAction="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/ReceiveMobDataOp" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMobDataStatusOp">
+      <soap12:operation soapAction="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/Cog/MobDataEndPushItf/ReceiveMobDataStatusOp" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveAuthorise">
+      <soap12:operation soapAction="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/ReceiveMobDataOp" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MobDataEngPushItf">
+    <wsdl:port name="MobDataEngPushItfHTTPBinding" binding="tns:MobDataEngPushItfHTTPBinding">
+      <soap:address location="https://10.251.1.7:3433/CogMobDataEngPushItf.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="MobDataEngPushItfHTTPBinding1" binding="tns:MobDataEngPushItfHTTPBinding1">
+      <soap12:address location="https://10.251.1.7:3433/CogMobDataEngPushItf.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://10.251.1.7:3433/CogMobDataEngPushItf.asmx</con:endpoint></con:endpoints><con:operation id="c088f3e8-fa56-4fcf-9a5d-b93731ad0bd1" isOneWay="false" action="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/ReceiveMobDataOp" name="ReceiveMobDataOp" bindingOperationName="ReceiveMobDataOp" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="660d8f9a-54e2-445e-97cf-3a362f1b6f0a" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://10.251.1.7:3433/CogMobDataEngPushItf.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://www.cognitomobile.com/schemas/Iface/MobDataEngPushItf/InterfaceIO.xsd" xmlns:msg="http://www.cognitomobile.com/schemas/Common/Mobile/Msg.xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <int:ReceiveMobDataParams xmlns="http://www.cognitomobile.com/schemas/Iface/MobDataEngPushItf/InterfaceIO.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+         <!--Optional:-->
+         <int:Grouping>
+            <!--Optional:-->
+            <int:GroupingID>?</int:GroupingID>
+            <!--Optional:-->
+            <int:Order>?</int:Order>
+         </int:Grouping>
+         <!--Optional:-->
+         <msg:Msg version="?" xmlns="http://www.cognitomobile.com/schemas/Common/Mobile/Msg.xsd">
+            <!--Optional:-->
+            <msg:Head>
+               <!--Optional:-->
+               <msg:ID>15487</msg:ID>
+               <!--Optional:-->
+               <msg:Times>
+                  <msg:Sent>2015-09-03T09:35:07Z</msg:Sent>
+                  <!--Optional:-->
+                  <msg:Networked>2015-09-03T09:35:16Z</msg:Networked>
+                  <!--Zero or more repetitions:-->
+                  <msg:Trace>
+                     <msg:SvcId>10003</msg:SvcId>
+                     <msg:Recv>2015-09-03T09:35:17Z</msg:Recv>
+                     <!--Optional:-->
+                     <msg:Fwd>2015-09-03T08:35:19.398Z</msg:Fwd>
+                  </msg:Trace>
+               </msg:Times>
+               <!--Optional:-->
+               <msg:From>
+                  <!--Optional:-->
+                  <msg:UA>#249360</msg:UA>
+                  <!--Optional:-->
+                  <msg:User>6647</msg:User>
+                  <!--Optional:-->
+                  <msg:Custom>
+                     <!--You may enter ANY elements at this point-->
+                  </msg:Custom>
+               </msg:From>
+            </msg:Head>
+            <!--Optional:-->
+            <msg:Env>
+               <!--Optional:-->
+               <msg:To>
+                  <!--You have a CHOICE of the next 3 items at this level-->
+                  <!--Optional:-->
+                  <msg:User>user</msg:User>
+                  <!--Optional:-->
+                  <msg:Custom>
+                     <!--You may enter ANY elements at this point-->
+                  </msg:Custom>
+                  <!--Optional:-->
+                  <msg:UA>?</msg:UA>
+               </msg:To>
+               <!--Optional:-->
+               <msg:Content>
+                  <!--You may enter ANY elements at this point-->
+               </msg:Content>
+            </msg:Env>
+         </msg:Msg>
+      </int:ReceiveMobDataParams>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>gmp-mobile</con:username><con:password>R!ca&amp;36vQh4</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/ReceiveMobDataOp"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="e8d6b991-4afd-4722-bbbe-ba1c63935917" isOneWay="false" action="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/Cog/MobDataEndPushItf/ReceiveMobDataStatusOp" name="ReceiveMobDataStatusOp" bindingOperationName="ReceiveMobDataStatusOp" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2e97ec3d-23db-42d7-b62a-3e027e45894f" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://10.251.1.7:3433/CogMobDataEngPushItf.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://www.cognitomobile.com/schemas/Iface/MobDataEngPushItf/InterfaceIO.xsd" xmlns:msg="http://www.cognitomobile.com/schemas/Common/Mobile/Msg.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <int:ReceiveMobDataStatusParams>\r
+         <!--Optional:-->\r
+         <int:Grouping>\r
+            <!--Optional:-->\r
+            <int:GroupingID>?</int:GroupingID>\r
+            <int:ActionType>?</int:ActionType>\r
+            <!--Optional:-->\r
+            <int:Order>?</int:Order>\r
+         </int:Grouping>\r
+         <!--Optional:-->\r
+         <msg:Status>\r
+            <!--Optional:-->\r
+            <msg:Head>\r
+               <!--Optional:-->\r
+               <msg:ID>?</msg:ID>\r
+               <!--Optional:-->\r
+               <msg:Times>\r
+                  <msg:Sent>?</msg:Sent>\r
+                  <!--Optional:-->\r
+                  <msg:Networked>?</msg:Networked>\r
+                  <!--Zero or more repetitions:-->\r
+                  <msg:Trace>\r
+                     <msg:SvcId>?</msg:SvcId>\r
+                     <msg:Recv>?</msg:Recv>\r
+                     <!--Optional:-->\r
+                     <msg:Fwd>?</msg:Fwd>\r
+                  </msg:Trace>\r
+               </msg:Times>\r
+               <!--Optional:-->\r
+               <msg:From>\r
+                  <!--Optional:-->\r
+                  <msg:UA>?</msg:UA>\r
+                  <!--Optional:-->\r
+                  <msg:User>?</msg:User>\r
+                  <!--Optional:-->\r
+                  <msg:Custom>\r
+                     <!--You may enter ANY elements at this point-->\r
+                  </msg:Custom>\r
+               </msg:From>\r
+            </msg:Head>\r
+            <!--Optional:-->\r
+            <msg:StatusContent version="?">\r
+               <!--Optional:-->\r
+               <msg:StatusCode>?</msg:StatusCode>\r
+               <!--Optional:-->\r
+               <msg:StatusString>?</msg:StatusString>\r
+               <!--Optional:-->\r
+               <msg:ReasonCode>?</msg:ReasonCode>\r
+               <!--Optional:-->\r
+               <msg:ReasonString>?</msg:ReasonString>\r
+               <!--Optional:-->\r
+               <msg:ErrLineNum>?</msg:ErrLineNum>\r
+               <!--Optional:-->\r
+               <msg:ErrDataStr>?</msg:ErrDataStr>\r
+               <!--Optional:-->\r
+               <msg:ErrCode>?</msg:ErrCode>\r
+               <!--Optional:-->\r
+               <msg:SvcId>?</msg:SvcId>\r
+               <!--Optional:-->\r
+               <msg:InterfaceId>?</msg:InterfaceId>\r
+               <!--Optional:-->\r
+               <msg:Extra>\r
+                  <!--You may enter ANY elements at this point-->\r
+               </msg:Extra>\r
+            </msg:StatusContent>\r
+         </msg:Status>\r
+      </int:ReceiveMobDataStatusParams>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/Cog/MobDataEndPushItf/ReceiveMobDataStatusOp"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="25212d63-d0d5-4926-9f55-996a4f999a7d" isOneWay="false" action="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/ReceiveMobDataOp" name="ReceiveAuthorise" bindingOperationName="ReceiveAuthorise" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5cb1de62-d567-49a3-8bbe-529ac1ef2a70" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://10.251.1.7:3433/CogMobDataEngPushItf.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://www.cognitomobile.com/schemas/Iface/MobDataEngPushItf/InterfaceIO.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <int:receiveAuthParams>\r
+         <!--Optional:-->\r
+         <int:Email>test@uk.issworld.com</int:Email>\r
+         <!--Optional:-->\r
+         <int:Password>1234</int:Password>\r
+      </int:receiveAuthParams>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>gmp-mobile</con:username><con:password>R!ca&amp;36vQh4</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/ReceiveMobDataOp"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="897761c7-7c06-4dce-8475-d196616b7156" wsaVersion="NONE" name="MobDataEngPushItfHTTPBinding1" type="wsdl" bindingName="{http://www.cognitomobile.com/services/Iface/Engine/MobDataEngPushItf}MobDataEngPushItfHTTPBinding1" soapVersion="1_2" anonymous="optional" definition="https://10.251.1.7:3433?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://10.251.1.7:3433?wsdl"><con:part><con:url>https://10.251.1.7:3433?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.cognitomobile.com/services/Iface/Engine/MobDataEngPushItf" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s2="http://www.cognitomobile.com/schemas/Common/Errors.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.cognitomobile.com/services/Iface/Engine/MobDataEngPushItf" xmlns:s1="http://www.cognitomobile.com/schemas/Common/Mobile/Msg.xsd" xmlns:s0="http://www.cognitomobile.com/schemas/Iface/MobDataEngPushItf/InterfaceIO.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.cognitomobile.com/schemas/Iface/MobDataEngPushItf/InterfaceIO.xsd">
+      <s:import namespace="http://www.cognitomobile.com/schemas/Common/Mobile/Msg.xsd"/>
+      <s:import namespace="http://www.cognitomobile.com/schemas/Common/Errors.xsd"/>
+      <s:element name="ReceiveMobDataParams">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Grouping">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="GroupingID" type="s:string"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="Order" type="s:int"/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:Msg"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveMobDataReturn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Details" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="Exception">
+              <s:complexType>
+                <s:sequence>
+                  <s:choice minOccurs="1" maxOccurs="1">
+                    <s:element minOccurs="0" maxOccurs="1" ref="s2:CogErrResourceUnavailable"/>
+                    <s:element minOccurs="0" maxOccurs="1" ref="s2:CogErrUnexpected"/>
+                  </s:choice>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveMobDataStatusParams">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Grouping">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="GroupingID" type="s:string"/>
+                  <s:element minOccurs="1" maxOccurs="1" name="ActionType" type="s:int"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="Order" type="s:int"/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:Status"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveMobDataStatusReturn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Details" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="Exception">
+              <s:complexType>
+                <s:sequence>
+                  <s:choice minOccurs="1" maxOccurs="1">
+                    <s:element minOccurs="0" maxOccurs="1" ref="s2:CogErrResourceUnavailable"/>
+                    <s:element minOccurs="0" maxOccurs="1" ref="s2:CogErrUnexpected"/>
+                  </s:choice>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.cognitomobile.com/schemas/Common/Mobile/Msg.xsd">
+      <s:element name="Msg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Head">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="Times">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="Sent" type="s:dateTime"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="Networked" type="s:dateTime"/>
+                        <s:element minOccurs="0" maxOccurs="unbounded" name="Trace">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="1" maxOccurs="1" name="SvcId" type="s:unsignedInt"/>
+                              <s:element minOccurs="1" maxOccurs="1" name="Recv" type="s:dateTime"/>
+                              <s:element minOccurs="0" maxOccurs="1" name="Fwd" type="s:dateTime"/>
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" name="From">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="UA" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="Custom">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:any/>
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Env">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="To">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:choice minOccurs="1" maxOccurs="1">
+                          <s:element minOccurs="0" maxOccurs="1" name="UA" type="s:string"/>
+                          <s:element minOccurs="0" maxOccurs="1" name="Custom">
+                            <s:complexType>
+                              <s:sequence>
+                                <s:any/>
+                              </s:sequence>
+                            </s:complexType>
+                          </s:element>
+                          <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string"/>
+                        </s:choice>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" name="Content">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:any/>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="version" type="s:string"/>
+        </s:complexType>
+      </s:element>
+      <s:element name="Status">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Head">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="Times">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="Sent" type="s:dateTime"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="Networked" type="s:dateTime"/>
+                        <s:element minOccurs="0" maxOccurs="unbounded" name="Trace">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="1" maxOccurs="1" name="SvcId" type="s:unsignedInt"/>
+                              <s:element minOccurs="1" maxOccurs="1" name="Recv" type="s:dateTime"/>
+                              <s:element minOccurs="0" maxOccurs="1" name="Fwd" type="s:dateTime"/>
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" name="From">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="UA" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="Custom">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:any/>
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="StatusContent">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="StatusString" type="s:string"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="ReasonCode" type="s:string"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="ReasonString" type="s:string"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="ErrLineNum" type="s:unsignedInt"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="ErrDataStr" type="s:string"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="ErrCode" type="s:unsignedInt"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="SvcId" type="s:unsignedInt"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="InterfaceId" type="s:unsignedInt"/>
+                  <s:element minOccurs="0" maxOccurs="1" name="Extra">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:any/>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+                <s:attribute name="version" type="s:string"/>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.cognitomobile.com/schemas/Common/Errors.xsd">
+      <s:element name="CogErrResourceUnavailable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrInfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="1" maxOccurs="1" name="TimeDateOccurred" type="s:dateTime"/>
+                  <s:element minOccurs="1" maxOccurs="1" name="SuggRetryBaseSecs" type="s:unsignedInt"/>
+                  <s:element minOccurs="1" maxOccurs="1" name="SuggRetryRandSecs" type="s:unsignedInt"/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CogErrUnexpected">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrInfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="1" maxOccurs="1" name="TimeDateOccurred" type="s:dateTime"/>
+                  <s:element minOccurs="1" maxOccurs="1" name="SuggRetryBaseSecs" type="s:unsignedInt"/>
+                  <s:element minOccurs="1" maxOccurs="1" name="SuggRetryRandSecs" type="s:unsignedInt"/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ReceiveMobDataOpSoapIn">
+    <wsdl:part name="receiveMobDataParams" element="s0:ReceiveMobDataParams"/>
+  </wsdl:message>
+  <wsdl:message name="ReceiveMobDataOpSoapOut">
+    <wsdl:part name="ReceiveMobDataOpResult" element="s0:ReceiveMobDataReturn"/>
+  </wsdl:message>
+  <wsdl:message name="ReceiveMobDataStatusOpSoapIn">
+    <wsdl:part name="receiveMobDataStatusParams" element="s0:ReceiveMobDataStatusParams"/>
+  </wsdl:message>
+  <wsdl:message name="ReceiveMobDataStatusOpSoapOut">
+    <wsdl:part name="ReceiveMobDataStatusOpResult" element="s0:ReceiveMobDataStatusReturn"/>
+  </wsdl:message>
+  <wsdl:portType name="MobDataEngPushItfHTTPBinding">
+    <wsdl:operation name="ReceiveMobDataOp">
+      <wsdl:input message="tns:ReceiveMobDataOpSoapIn"/>
+      <wsdl:output message="tns:ReceiveMobDataOpSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMobDataStatusOp">
+      <wsdl:input message="tns:ReceiveMobDataStatusOpSoapIn"/>
+      <wsdl:output message="tns:ReceiveMobDataStatusOpSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MobDataEngPushItfHTTPBinding" type="tns:MobDataEngPushItfHTTPBinding">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ReceiveMobDataOp">
+      <soap:operation soapAction="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/ReceiveMobDataOp" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMobDataStatusOp">
+      <soap:operation soapAction="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/Cog/MobDataEndPushItf/ReceiveMobDataStatusOp" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MobDataEngPushItfHTTPBinding1" type="tns:MobDataEngPushItfHTTPBinding">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ReceiveMobDataOp">
+      <soap12:operation soapAction="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/ReceiveMobDataOp" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMobDataStatusOp">
+      <soap12:operation soapAction="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/Cog/MobDataEndPushItf/ReceiveMobDataStatusOp" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MobDataEngPushItf">
+    <wsdl:port name="MobDataEngPushItfHTTPBinding" binding="tns:MobDataEngPushItfHTTPBinding">
+      <soap:address location="https://10.251.1.7:3433/CogMobDataEngPushItf.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="MobDataEngPushItfHTTPBinding1" binding="tns:MobDataEngPushItfHTTPBinding1">
+      <soap12:address location="https://10.251.1.7:3433/CogMobDataEngPushItf.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://10.251.1.7:3433/CogMobDataEngPushItf.asmx</con:endpoint></con:endpoints><con:operation id="39c8dc24-7c96-4910-b166-2e83da14a851" isOneWay="false" action="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/ReceiveMobDataOp" name="ReceiveMobDataOp" bindingOperationName="ReceiveMobDataOp" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="47659dc8-e150-41c7-846d-801b857515ee" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://10.251.1.7:3433/CogMobDataEngPushItf.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://www.cognitomobile.com/schemas/Iface/MobDataEngPushItf/InterfaceIO.xsd" xmlns:msg="http://www.cognitomobile.com/schemas/Common/Mobile/Msg.xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <int:ReceiveMobDataParams>
+         <!--Optional:-->
+         <int:Grouping>
+            <!--Optional:-->
+            <int:GroupingID>1</int:GroupingID>
+            <!--Optional:-->
+            <int:Order>1</int:Order>
+         </int:Grouping>
+         <!--Optional:-->
+         <msg:Msg version="?">
+            <!--Optional:-->
+            <msg:Head>
+               <!--Optional:-->
+               <msg:ID>15487</msg:ID>
+               <!--Optional:-->
+               <msg:Times>
+                  <msg:Sent>2015-09-03T09:35:07Z</msg:Sent>
+                  <!--Optional:-->
+                  <msg:Networked>2015-09-03T09:35:16Z</msg:Networked>
+                  <!--Zero or more repetitions:-->
+                  <msg:Trace>
+                     <msg:SvcId>10003</msg:SvcId>
+                     <msg:Recv>2015-09-03T09:35:17Z</msg:Recv>
+                     <!--Optional:-->
+                     <msg:Fwd>2015-09-03T08:35:19.398Z</msg:Fwd>
+                  </msg:Trace>
+               </msg:Times>
+               <!--Optional:-->
+               <msg:From>
+                  <!--Optional:-->
+                  <msg:UA>#249360</msg:UA>
+                  <!--Optional:-->
+                  <msg:User>6647</msg:User>
+                  <!--Optional:-->
+                  <msg:Custom>
+                     <LabourCode xmlns="">6647</LabourCode>
+                     <!--You may enter ANY elements at this point-->
+                  </msg:Custom>
+               </msg:From>
+            </msg:Head>
+            <!--Optional:-->
+            <msg:Env>
+               <!--Optional:-->
+               <msg:To>
+                  <!--You have a CHOICE of the next 3 items at this level-->
+                  <!--Optional:-->
+                  <msg:UA>?</msg:UA>
+                  <!--Optional:-->
+                  <msg:Custom>
+                     <!--You may enter ANY elements at this point-->
+                  </msg:Custom>
+                  <!--Optional:-->
+                  <msg:User>user</msg:User>
+               </msg:To>
+               <!--Optional:-->
+               <msg:Content>
+                  <!--You may enter ANY elements at this point-->
+                  <cus:Custom xmlns:cus="http://www.cognitomobile.com/schemas/Common/Mobile/MsgContent/Custom.xsd" xmlns:log="http://www.gshgroup.com/schemas/formsplus/logon" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:mfp="http://www.cognitomobile.com/schemas/Common/Mobile/MsgContent/FormsP.xsd" xmlns:CogCommonXPath="java://CogCommonXPath">
+          <log:LogOn>
+            <log:Version>1.8.39</log:Version>
+            <log:CognitoDeviceID>#249360</log:CognitoDeviceID>
+            <log:SentTimeDate>2015-09-03T08:35:07+01:00</log:SentTimeDate>
+            <log:LogOnTimeDate>2015-09-03T09:35:07+01:00</log:LogOnTimeDate>
+            <log:LocationStatus>0</log:LocationStatus>
+            <log:LabourCode>6647</log:LabourCode>
+            <log:LoginValue>34</log:LoginValue>
+            <log:VehicleUser>Yes</log:VehicleUser>
+            <log:VehicleReg>HGHH</log:VehicleReg>
+            <log:ValidCarTax>1</log:ValidCarTax>
+            <log:FailureNotes>notes</log:FailureNotes>
+            <log:Tyres>1</log:Tyres>
+            <log:Lights>2</log:Lights>
+            <log:WarningLights>1</log:WarningLights>
+            <log:Water>1</log:Water>
+            <log:Oil>1</log:Oil>
+            <log:Fuel>3</log:Fuel>
+            <log:Damage>1</log:Damage>
+          </log:LogOn>
+        </cus:Custom>
+               </msg:Content>
+            </msg:Env>
+         </msg:Msg>
+      </int:ReceiveMobDataParams>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>gmp-mobile</con:username><con:password>R!ca&amp;36vQh4</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.cognitomobile.com/services/Iface/Engine/MobDataEngPushItf/MobDataEngPushItfHTTPBinding/ReceiveMobDataOpRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="06de590c-d680-4816-905f-a76e143f54e8" isOneWay="false" action="/Cog/Svcs/Itfs/MobDataEngSvc/Soap/Cog/MobDataEndPushItf/ReceiveMobDataStatusOp" name="ReceiveMobDataStatusOp" bindingOperationName="ReceiveMobDataStatusOp" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f0cfa90d-fe25-4307-941b-516bda8feb52" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://10.251.1.7:3433/CogMobDataEngPushItf.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:int="http://www.cognitomobile.com/schemas/Iface/MobDataEngPushItf/InterfaceIO.xsd" xmlns:msg="http://www.cognitomobile.com/schemas/Common/Mobile/Msg.xsd">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <int:ReceiveMobDataStatusParams>\r
+         <!--Optional:-->\r
+         <int:Grouping>\r
+            <!--Optional:-->\r
+            <int:GroupingID>?</int:GroupingID>\r
+            <int:ActionType>?</int:ActionType>\r
+            <!--Optional:-->\r
+            <int:Order>?</int:Order>\r
+         </int:Grouping>\r
+         <!--Optional:-->\r
+         <msg:Status>\r
+            <!--Optional:-->\r
+            <msg:Head>\r
+               <!--Optional:-->\r
+               <msg:ID>?</msg:ID>\r
+               <!--Optional:-->\r
+               <msg:Times>\r
+                  <msg:Sent>?</msg:Sent>\r
+                  <!--Optional:-->\r
+                  <msg:Networked>?</msg:Networked>\r
+                  <!--Zero or more repetitions:-->\r
+                  <msg:Trace>\r
+                     <msg:SvcId>?</msg:SvcId>\r
+                     <msg:Recv>?</msg:Recv>\r
+                     <!--Optional:-->\r
+                     <msg:Fwd>?</msg:Fwd>\r
+                  </msg:Trace>\r
+               </msg:Times>\r
+               <!--Optional:-->\r
+               <msg:From>\r
+                  <!--Optional:-->\r
+                  <msg:UA>?</msg:UA>\r
+                  <!--Optional:-->\r
+                  <msg:User>?</msg:User>\r
+                  <!--Optional:-->\r
+                  <msg:Custom>\r
+                     <!--You may enter ANY elements at this point-->\r
+                  </msg:Custom>\r
+               </msg:From>\r
+            </msg:Head>\r
+            <!--Optional:-->\r
+            <msg:StatusContent version="?">\r
+               <!--Optional:-->\r
+               <msg:StatusCode>?</msg:StatusCode>\r
+               <!--Optional:-->\r
+               <msg:StatusString>?</msg:StatusString>\r
+               <!--Optional:-->\r
+               <msg:ReasonCode>?</msg:ReasonCode>\r
+               <!--Optional:-->\r
+               <msg:ReasonString>?</msg:ReasonString>\r
+               <!--Optional:-->\r
+               <msg:ErrLineNum>?</msg:ErrLineNum>\r
+               <!--Optional:-->\r
+               <msg:ErrDataStr>?</msg:ErrDataStr>\r
+               <!--Optional:-->\r
+               <msg:ErrCode>?</msg:ErrCode>\r
+               <!--Optional:-->\r
+               <msg:SvcId>?</msg:SvcId>\r
+               <!--Optional:-->\r
+               <msg:InterfaceId>?</msg:InterfaceId>\r
+               <!--Optional:-->\r
+               <msg:Extra>\r
+                  <!--You may enter ANY elements at this point-->\r
+               </msg:Extra>\r
+            </msg:StatusContent>\r
+         </msg:Status>\r
+      </int:ReceiveMobDataStatusParams>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.cognitomobile.com/services/Iface/Engine/MobDataEngPushItf/MobDataEngPushItfHTTPBinding/ReceiveMobDataStatusOpRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

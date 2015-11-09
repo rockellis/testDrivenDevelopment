@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.iss.com/operationalservices/external/sendmobdata/jobmessage/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:SendJob>
+         <v1:UniqueRef>11498455-6647</v1:UniqueRef>
+         <v1:ActionType>DELETE</v1:ActionType>
+      </v1:SendJob>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,333 @@
+{
+  "active": true,
+  "_createDateTime": 1446216701879,
+  "woData": {
+
+    "woid": "11498455-6647",
+    "displayWonum": "11498453",
+    "createdTs": 1438114125422,
+    "createdOn": "2015-10-30T14:51:39.857Z",
+    "workOrderType": "PM - Monthly",
+    "workOrderTypeCode": "PM ",
+    "workflowType": "",
+    "jobDescription": "PM - NAG - MONTHLY MMU MAINTENANCE PM SCOPE OF WORKS1 COMPLETE GSH RISK ASSESSMENT2 CHECK ASBESTOS REGISTER BEFORE CARRYING OUT ANY MAINTENANCE3 CARRY OUT MONTHLY MMU MAINTENANCE AS PER THE NAG MMU SCOPE OF WORKS4 TAKE ALL METER READINGS ELEC / GAS / WATER AND SEND THROUGH TO FAXMAIL 01782 408420",
+    "jobLatLng": "",
+    "jobAddress": "58 HIGH STREET,58 HIGH STREET,BRADFORD,Yorks,BD13 2QL",
+    "scheduledDateTime": null,
+    "targetStartDateTime": "0001-01-01T00:00:00+00:00",
+    "targetFinishDateTime": null,
+    "assignedTo": "6647",
+    "binariesAttached": [],
+
+    "appData": {
+
+    },
+    "access": {
+
+    },
+    "accessPermit": {
+
+    },
+    "actionType": "ADD",
+    "address1": "58 HIGH STREET",
+    "address2": "58 HIGH STREET",
+    "assetLocation": {
+
+    },
+    "assetReference": {
+
+    },
+    "certReqInd": "0",
+    "client": "NAG YORKSHIRE BANK",
+    "clientLocationID": {
+
+    },
+    "clientRef": {
+
+    },
+    "colour": "BLUE",
+    "contact": {
+
+    },
+    "contractID": "11322",
+    "county": "Yorks",
+    "estDurRqd": "0",
+    "failureCodeRqd": "0",
+    "jobDate": "2015-02-15",
+    "jobDetails": "PM - NAG - MONTHLY MMU MAINTENANCE PM SCOPE OF WORKS1 COMPLETE GSH RISK ASSESSMENT2 CHECK ASBESTOS REGISTER BEFORE CARRYING OUT ANY MAINTENANCE3 CARRY OUT MONTHLY MMU MAINTENANCE AS PER THE NAG MMU SCOPE OF WORKS4 TAKE ALL METER READINGS ELEC / GAS / WATER AND SEND THROUGH TO FAXMAIL 01782 408420PO 2999335 Updated to Status APPR on the 30/01/15 09:42 by 99991PO 2999335 Updated to Status APPR on the 30/01/15 09:42 by 99991Status updated to: APPR on the 23/01/15 20:45 by MAXADMINStatus updated to: WAPPR on the 15/01/15 18:56 by MAXADMIN",
+    "jobTime": "00:00:00.0000000+01:00",
+    "locationID": "113227",
+    "locationName": "YORKSHIRE BANK - QUEENSBURY 58 HIGH STREET",
+    "meters": [{
+      "SerialNumber": "01790",
+      "ID": "2170073",
+      "Type": "Electric",
+      "Location": "113227",
+      "PreviousReading": "52158",
+      "Notes": "NA",
+      "UpperReadingLimit": "0",
+      "LowerReadingLimit": "52158"
+    }, {
+      "SerialNumber": "02381",
+      "ID": "2170074",
+      "Type": "Electric",
+      "Location": "113227",
+      "PreviousReading": "40200",
+      "Notes": "NA",
+      "UpperReadingLimit": "0",
+      "LowerReadingLimit": "40200"
+    }, {
+      "SerialNumber": "05540",
+      "ID": "2170075",
+      "Type": "Electric",
+      "Location": "113227",
+      "PreviousReading": "48198",
+      "Notes": "NA",
+      "UpperReadingLimit": "0",
+      "LowerReadingLimit": "48198"
+    }, {
+      "SerialNumber": "2964",
+      "ID": "2170076",
+      "Type": "Gas",
+      "Location": "113227",
+      "PreviousReading": "4071",
+      "Notes": "NA",
+      "UpperReadingLimit": "0",
+      "LowerReadingLimit": "4071"
+    }, {
+      "SerialNumber": "bb63k-1790",
+      "ID": "2174778",
+      "Type": "Electric",
+      "Location": "113227",
+      "PreviousReading": "54418",
+      "Notes": "NA",
+      "UpperReadingLimit": "0",
+      "LowerReadingLimit": "54418"
+    }, {
+      "SerialNumber": "12MA014081",
+      "ID": "2179003",
+      "Type": "Water",
+      "Location": "113227",
+      "PreviousReading": "128",
+      "Notes": "new meter",
+      "UpperReadingLimit": "0",
+      "LowerReadingLimit": "128"
+    }, {
+      "SerialNumber": "262964s",
+      "ID": "2180876",
+      "Type": "Gas",
+      "Location": "113227",
+      "PreviousReading": "4202",
+      "Notes": "NA",
+      "UpperReadingLimit": "0",
+      "LowerReadingLimit": "4202"
+    }, {
+      "SerialNumber": "9022",
+      "ID": "2180878",
+      "Type": "Water",
+      "Location": "113227",
+      "PreviousReading": "308",
+      "Notes": "NA",
+      "UpperReadingLimit": "0",
+      "LowerReadingLimit": "308"
+    }, {
+      "SerialNumber": "07 009022",
+      "ID": "2182582",
+      "Type": "Water",
+      "Location": "113227",
+      "PreviousReading": "310",
+      "Notes": "NA",
+      "UpperReadingLimit": "0",
+      "LowerReadingLimit": "310"
+    }, {
+      "SerialNumber": "bb64k02381",
+      "ID": "2182587",
+      "Type": "Electric",
+      "Location": "113227",
+      "PreviousReading": "40202",
+      "Notes": "NA",
+      "UpperReadingLimit": "0",
+      "LowerReadingLimit": "40202"
+    }, {
+      "SerialNumber": "12ma014081",
+      "ID": "2183170",
+      "Type": "Water",
+      "Location": "113227",
+      "PreviousReading": "134",
+      "Notes": "NA",
+      "UpperReadingLimit": "0",
+      "LowerReadingLimit": "134"
+    }, {
+      "SerialNumber": "2962964s",
+      "ID": "2183171",
+      "Type": "Gas",
+      "Location": "113227",
+      "PreviousReading": "4207",
+      "Notes": "NA",
+      "UpperReadingLimit": "0",
+      "LowerReadingLimit": "4207"
+    }, {
+      "SerialNumber": "bb62k05540",
+      "ID": "2183172",
+      "Type": "Electric",
+      "Location": "113227",
+      "PreviousReading": "40323",
+      "Notes": "NA",
+      "UpperReadingLimit": "0",
+      "LowerReadingLimit": "40323"
+    }, {
+      "SerialNumber": "bb63k01790",
+      "ID": "2183173",
+      "Type": "Electric",
+      "Location": "113227",
+      "PreviousReading": "68383",
+      "Notes": "NA",
+      "UpperReadingLimit": "0",
+      "LowerReadingLimit": "68383"
+    }],
+    "noRiskAssRqd": "1",
+    "phone1": {
+
+    },
+    "phone2": {
+
+    },
+    "planCode": "AHVAC35301M",
+    "planDesc": "PM - NAG - MONTHLY MMU MAINTENANCE",
+    "planInst": "PM SCOPE OF WORKS1 COMPLETE GSH RISK ASSESSMENT2 CHECK ASBESTOS REGISTER BEFORE CARRYING OUT ANY MAINTENANCE3 CARRY OUT MONTHLY MMU MAINTENANCE AS PER THE NAG MMU SCOPE OF WORKS4 TAKE ALL METER READINGS ELEC / GAS / WATER AND SEND THROUGH TO FAXMAIL 01782 408420",
+    "postcode": "BD13 2QL",
+    "priority": {
+
+    },
+    "sort": "2015/02/15 00:00:00",
+    "supplier": [{
+      "SupplierName": "CITY ELECTRICAL FACTORS LTD ( KEIGHLEY )",
+      "SupplierCategory": {
+
+      },
+      "ContactDetails": "Contact: Phone:01535 662568 Fax:01535 662537",
+      "Address1": "UNIT D",
+      "Address2": "GRESLEY RD IND EST",
+      "County": "KEIGHLEY",
+      "PostCode": "BD21 5RN"
+    }, {
+      "SupplierName": "CITY ELECTRICAL FACTORS LTD (BRADFORD )",
+      "SupplierCategory": {
+
+      },
+      "ContactDetails": "Contact: Phone:01274739101 Fax:01274 739655",
+      "Address1": "UNIT B BOWLING BACK LANE IND ESTATE",
+      "Address2": "BOWLING BACK LANE",
+      "County": "BRADFORD",
+      "PostCode": "BD4 8SH"
+    }, {
+      "SupplierName": "EDMUNDSON ELECTRICAL LIMITED (BRADFORD)",
+      "SupplierCategory": {
+
+      },
+      "ContactDetails": "Contact: Phone:01274 725715 Fax:01274 305492",
+      "Address1": "CHANDOS STREET",
+      "Address2": "WAKEFIELD ROAD",
+      "County": "BRADFORD",
+      "PostCode": "BD4 7AY"
+    }, {
+      "SupplierName": "EDMUNDSON ELECTRICAL LIMITED (KEIGHLEY)",
+      "SupplierCategory": {
+
+      },
+      "ContactDetails": "Contact: Phone:01535 691111 Fax:01535 691358",
+      "Address1": "UNIT 3 KEIGHLEY INDUSTRIAL ESTATE",
+      "Address2": "ROYD INGS AVENUE",
+      "County": "KEIGHLEY",
+      "PostCode": "BD21 4DZ"
+    }, {
+      "SupplierName": "HSS HIRE SERVICES (BRADFORD)",
+      "SupplierCategory": {
+
+      },
+      "ContactDetails": "Contact: Phone:01274 691286 Fax:0113 2407070",
+      "Address1": "101 HALIFAX ROAD",
+      "Address2": {
+
+      },
+      "County": "BRADFORD",
+      "PostCode": "BD6 1JQ"
+    }, {
+      "SupplierName": "HSS HIRE SERVICES (WAKEFIELD RD-BRADFORD)",
+      "SupplierCategory": {
+
+      },
+      "ContactDetails": "Contact: Phone:01274 308055 Fax:01274 693516",
+      "Address1": "WAKEFIELD ROAD",
+      "Address2": {
+
+      },
+      "County": "BRADFORD",
+      "PostCode": "BD4 7LX"
+    }, {
+      "SupplierName": "HSS HIRE SERVICES (KEIGHLEY)",
+      "SupplierCategory": {
+
+      },
+      "ContactDetails": "Contact: Phone:01535 690678 Fax:01484 432827",
+      "Address1": "56 SOUTH STREET",
+      "Address2": {
+
+      },
+      "County": "KEIGHLEY",
+      "PostCode": "BD21 1DD"
+    }, {
+      "SupplierName": "NEWEY & EYRE  (BRADFORD)",
+      "SupplierCategory": {
+
+      },
+      "ContactDetails": "Contact: Phone:01274 305646 Fax:01274 733097",
+      "Address1": "5 & 7 RUTLAND STREET",
+      "Address2": {
+
+      },
+      "County": "BRADFORD",
+      "PostCode": "BD4 7EA"
+    }, {
+      "SupplierName": "WF ELECTRICAL (KEIGHLEY)",
+      "SupplierCategory": {
+
+      },
+      "ContactDetails": "Contact: Phone:01535 607733 Fax:01535 610320",
+      "Address1": "UNIT 4 SPRING STREET",
+      "Address2": "OFF LAWKHOLME LANE",
+      "County": "KEIGHLEY- WEST YORKSHIRE",
+      "PostCode": "BD21 3LE"
+    }, {
+      "SupplierName": "CONTROL CENTRE (BRADFORD)",
+      "SupplierCategory": {
+
+      },
+      "ContactDetails": "Contact: Phone:01274 395333 Fax:01274 395444",
+      "Address1": "UNIT 3 FOWLER ROAD",
+      "Address2": "OFF WAKEFIELD ROAD",
+      "County": "BRADFORD",
+      "PostCode": "BD4 7NE"
+    }],
+    "system": "MAX6TEST",
+    "targetEndDateSort": "999",
+    "targetStartDateSort": "999",
+    "task360": "1",
+    "taskDescription": "PM - MONTHLY METER READINGS - SEE LONG DESCRIPTION",
+    "taskDescriptionLong": "Carry out Gas/Water and Electric Meter Readings and Update the Meter Reading Screen in the Extra Info Box on the Job Screen",
+    "taskNo": "11498455",
+    "town": "BRADFORD",
+    "wOEquipmentNo": "909512",
+    "wOStatus": "APPR",
+    "_createDateTime": 1446216699859
+  },
+
+  "appData": {
+    "woState": {
+      "currentState": "",
+      "eventLog": []
+    },
+    "workflow": {},
+    "binariesCreated": [],
+  }
+}

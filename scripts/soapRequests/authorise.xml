@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:int="http://www.cognitomobile.com/schemas/Iface/MobDataEngPushItf/InterfaceIO.xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <int:receiveAuthParams>
+         <int:Email>test@uk.issworld.com</int:Email>
+         <int:Password>123</int:Password>
+      </int:receiveAuthParams>
+   </soapenv:Body>
+</soapenv:Envelope>

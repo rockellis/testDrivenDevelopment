@@ -1,0 +1,56 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.iss.com/operationalservices/external/sendmobdata/message/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:ReceiveMobDataParams xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <v1:Msg xmlns="http://www.cognitomobile.com/schemas/Common/Mobile/Msg.xsd">
+          <v1:Head>
+            <v1:ID>15487</v1:ID>
+            <v1:Times>
+              <v1:Sent>2015-09-03T09:35:07Z</v1:Sent>
+              <v1:Networked>2015-09-03T09:35:16Z</v1:Networked>
+              <Trace>
+                <SvcId>10003</SvcId>
+                <Recv>2015-09-03T09:35:17Z</Recv>
+                <Fwd>2015-09-03T08:35:19.398Z</Fwd>
+              </Trace>
+            </Times>
+            <From>
+              <UA>#249360</UA>
+              <Custom>
+                <LabourCode xmlns="">6647</LabourCode>
+              </Custom>
+            </From>
+          </Head>
+          <Env>
+            <To>
+              <User>user</User>
+            </To>
+            <Content>
+              <cus:Custom xmlns:cus="http://www.cognitomobile.com/schemas/Common/Mobile/MsgContent/Custom.xsd" xmlns:log="http://www.gshgroup.com/schemas/formsplus/logon" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:mfp="http://www.cognitomobile.com/schemas/Common/Mobile/MsgContent/FormsP.xsd" xmlns:CogCommonXPath="java://CogCommonXPath">
+                <log:LogOn>
+                  <log:Version>1.8.39</log:Version>
+                  <log:CognitoDeviceID>#249360</log:CognitoDeviceID>
+                  <log:SentTimeDate>2015-09-03T08:35:07+01:00</log:SentTimeDate>
+                  <log:LogOnTimeDate>2015-09-03T09:35:07+01:00</log:LogOnTimeDate>
+                  <log:LocationStatus>0</log:LocationStatus>
+                  <log:LabourCode>6647</log:LabourCode>
+                  <log:LoginValue>34</log:LoginValue>
+                  <log:VehicleUser>Yes</log:VehicleUser>
+                  <log:VehicleReg>HGHH</log:VehicleReg>
+                  <log:ValidCarTax>1</log:ValidCarTax>
+                  <log:FailureNotes>notes</log:FailureNotes>
+                  <log:Tyres>1</log:Tyres>
+                  <log:Lights>2</log:Lights>
+                  <log:WarningLights>1</log:WarningLights>
+                  <log:Water>1</log:Water>
+                  <log:Oil>1</log:Oil>
+                  <log:Fuel>3</log:Fuel>
+                  <log:Damage>1</log:Damage>
+                </log:LogOn>
+              </cus:Custom>
+            </Content>
+          </Env>
+        </Msg>
+      </ReceiveMobDataParams>
+   </soapenv:Body>
+</soapenv:Envelope>

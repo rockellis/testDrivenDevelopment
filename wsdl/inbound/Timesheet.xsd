@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.iss.com/operationalservices/external/sendmobdata/tsmessage/v1" xmlns:mstns="http://www.iss.com/operationalservices/external/sendmobdata/tsmessage/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.iss.com/operationalservices/external/sendmobdata/tsmessage/v1" id="Timesheet" elementFormDefault="qualified">
+  <xs:element name="TimesheetId" type="TimesheetIdType"/>
+  <xs:complexType name="TimesheetIdType">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendTimesheet" type="WeeklyTimesheet" />
+  <xs:complexType name="WeeklyTimesheet">
+    <xs:sequence>
+      <xs:element name="GroupingID" type="xs:string"/>
+      <xs:element name="Order" type="xs:string"/>
+      <xs:element name="Sent" type="xs:string"/>
+      <xs:element name="ID" type="xs:string"/>
+      <xs:element name="Email" type="xs:string"/>
+      <xs:element name="LabourCode" type="xs:string"/>
+      <xs:element name="Status" type="xs:string" />
+      <xs:element name="ApprovalDesc" type="xs:string" />
+      <xs:element name="ApprovedBy" type="xs:string" />
+      <xs:element name="ApprovalDate" type="xs:string" />
+      <xs:element name="ApprovalTime" type="xs:string" />
+      <xs:element name="DisputeReason" type="xs:string" />
+      <xs:element name="TotalNormalHours" type="xs:double" />
+      <xs:element name="TotalOvertimeHours" type="xs:double" />
+      <xs:element name="TotalCalloutHours" type="xs:double" />
+      <xs:element name="DailyTotals" type="DailyTotals" maxOccurs="7" />
+      <xs:element name="WeekBeginning" type="xs:string" />
+      <xs:element name="StandByPay" type="xs:double" />
+      <xs:element name="SickTime" type="xs:double" />
+      <xs:element name="HolidayTime" type="xs:double" />
+      <xs:element name="TotBusMileage" type="xs:int" />
+      <xs:element name="TotPrivMileage" type="xs:int" />
+      <xs:element name="Details" type="xs:string" />
+      <xs:element name="Approve" type="xs:string" />
+      <!-- Yes or No-->
+      <xs:element name="ActionType" type="xs:string" />
+      <!-- ADD | UPDATE | DELETE -->
+      <xs:element name="UniqueId" type="xs:string" />
+      <xs:element name="RevisionNo" type="xs:int" />
+      <xs:element name="Total" type="xs:double" />
+      <xs:element name="WeeklyExpenses" type="Expenses" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DailyTotals">
+    <xs:sequence>
+      <xs:element name="Date" type="xs:string" />
+      <xs:element name="TotalNormalHours" type="xs:double" />
+      <xs:element name="TotalOvertimeHours" type="xs:double" />
+      <xs:element name="TotalCalloutHours" type="xs:double" />
+      <xs:element name="DailyTimesheetDetails" type="DailyTimesheetDetails" maxOccurs="100" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DailyTimesheetDetails">
+    <xs:sequence>
+      <xs:element name="JobIndicator" type="xs:string" />
+      <xs:element name="JobNo" type="xs:string" />
+      <xs:element name="JobDescription" type="xs:string" />
+      <xs:element name="JobType" type="xs:string" />
+      <xs:element name="DepartTime" type="xs:string" />
+      <xs:element name="ArriveTime" type="xs:string" />
+      <xs:element name="FinishTime" type="xs:string" />
+      <xs:element name="HomeTime" type="xs:string" />
+      <xs:element name="Duration" type="xs:double" />
+      <!-- changed from TravelDuration -->
+      <xs:element name="NormalHours" type="xs:double" />
+      <xs:element name="OvertimeHours" type="xs:double" />
+      <xs:element name="CallOutHours" type="xs:double" />
+      <xs:element name="LocationRef" type="xs:string" />
+      <xs:element name="LocationName" type="xs:string" />
+      <xs:element name="TransType" type="xs:string" />
+      <!-- changed from WorkDuration -->
+      <xs:element name="TransactionStart" type="xs:string" />
+      <xs:element name="TransactionFinish" type="xs:string" />
+      <xs:element name="Rate" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Expenses">
+    <xs:sequence>
+      <xs:element name="Description" type="xs:string" />
+      <xs:element name="Details" type="xs:string" />
+      <xs:element name="Value" type="xs:double" />
+      <xs:element name="Date" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

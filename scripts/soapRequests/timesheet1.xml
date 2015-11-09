@@ -1,0 +1,64 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.iss.com/operationalservices/external/sendmobdata/tsmessage/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:SendTimesheet>
+         <v1:Status>asdfasdf</v1:Status>
+         <v1:LabourCode>1637</v1:LabourCode>
+         <v1:ApprovalDesc>asdfasdfsa</v1:ApprovalDesc>
+         <v1:ApprovedBy>asdfas asdf sadf sadf</v1:ApprovedBy>
+         <v1:ApprovalDate>asdfas asdf sadf sadf</v1:ApprovalDate>
+         <v1:ApprovalTime>asdfas asdf sadf sadf</v1:ApprovalTime>
+         <v1:DisputeReason>asdfas asdf sadf sadf</v1:DisputeReason>
+         <v1:TotalNormalHours>asdfas asdf sadf sadf</v1:TotalNormalHours>
+         <v1:TotalOvertimeHours>asdfas asdf sadf sadf</v1:TotalOvertimeHours>
+         <v1:TotalCalloutHours>asdfas asdf sadf sadf</v1:TotalCalloutHours>
+         <!--1 to 7 repetitions:-->
+         <v1:DailyTotals>
+            <v1:Date>?</v1:Date>
+            <v1:TotalNormalHours>?</v1:TotalNormalHours>
+            <v1:TotalOvertimeHours>?</v1:TotalOvertimeHours>
+            <v1:TotalCalloutHours>?</v1:TotalCalloutHours>
+            <!--1 to 100 repetitions:-->
+            <v1:DailyTimesheetDetails>
+               <v1:JobIndicator>?</v1:JobIndicator>
+               <v1:JobNo>?</v1:JobNo>
+               <v1:JobDescription>?</v1:JobDescription>
+               <v1:JobType>?</v1:JobType>
+               <v1:DepartTime>?</v1:DepartTime>
+               <v1:ArriveTime>?</v1:ArriveTime>
+               <v1:FinishTime>?</v1:FinishTime>
+               <v1:HomeTime>?</v1:HomeTime>
+               <v1:Duration>?</v1:Duration>
+               <v1:NormalHours>?</v1:NormalHours>
+               <v1:OvertimeHours>?</v1:OvertimeHours>
+               <v1:CallOutHours>?</v1:CallOutHours>
+               <v1:LocationRef>?</v1:LocationRef>
+               <v1:LocationName>?</v1:LocationName>
+               <v1:TransType>?</v1:TransType>
+               <v1:TransactionStart>?</v1:TransactionStart>
+               <v1:TransactionFinish>?</v1:TransactionFinish>
+               <v1:Rate>?</v1:Rate>
+            </v1:DailyTimesheetDetails>
+         </v1:DailyTotals>
+         <v1:WeekBeginning>?</v1:WeekBeginning>
+         <v1:StandByPay>?</v1:StandByPay>
+         <v1:SickTime>?</v1:SickTime>
+         <v1:HolidayTime>?</v1:HolidayTime>
+         <v1:TotBusMileage>?</v1:TotBusMileage>
+         <v1:TotPrivMileage>?</v1:TotPrivMileage>
+         <v1:Details>?</v1:Details>
+         <v1:Approve>?</v1:Approve>
+         <v1:ActionType>ADD</v1:ActionType>
+         <v1:UniqueId>?</v1:UniqueId>
+         <v1:RevisionNo>?</v1:RevisionNo>
+         <v1:Total>?</v1:Total>
+         <!--Zero or more repetitions:-->
+         <v1:WeeklyExpenses>
+            <v1:Description>?</v1:Description>
+            <v1:Details>?</v1:Details>
+            <v1:Value>?</v1:Value>
+            <v1:Date>?</v1:Date>
+         </v1:WeeklyExpenses>
+      </v1:SendTimesheet>
+   </soapenv:Body>
+</soapenv:Envelope>

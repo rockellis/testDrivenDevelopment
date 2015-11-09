@@ -1,0 +1,306 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.iss.com/operationalservices/external/sendmobdata/jobmessage/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:SendJob>
+         <v1:UniqueRef>11498455-6647</v1:UniqueRef>
+         <v1:LabourCode>6647</v1:LabourCode>
+         <v1:JobNo>11498453</v1:JobNo>
+         <v1:Sort>2015/02/15 00:00:00</v1:Sort>
+         <v1:Colour>BLUE</v1:Colour>
+         <v1:Priority/>
+         <v1:JobDate>2015-02-15</v1:JobDate>
+         <v1:JobTime>00:00:00.0000000+01:00</v1:JobTime>
+         <v1:Address1>58 HIGH STREET</v1:Address1>
+         <v1:Address2>58 HIGH STREET</v1:Address2>
+         <v1:Town>BRADFORD</v1:Town>
+         <v1:County>Yorks</v1:County>
+         <v1:Postcode>BD13 2QL</v1:Postcode>
+         <v1:Client>NAG YORKSHIRE BANK</v1:Client>
+         <v1:Contact/>
+         <v1:Phone1/>
+         <v1:Phone2/>
+         <v1:Access/>
+         <v1:JobType>PM - Monthly</v1:JobType>
+         <v1:JobDescription>PM - NAG - MONTHLY MMU MAINTENANCE PM SCOPE OF WORKS
+
+1 COMPLETE GSH RISK ASSESSMENT
+2 CHECK ASBESTOS REGISTER BEFORE CARRYING OUT ANY MAINTENANCE
+3 CARRY OUT MONTHLY MMU MAINTENANCE AS PER THE NAG MMU SCOPE OF WORKS
+4 TAKE ALL METER READINGS ELEC / GAS / WATER AND SEND THROUGH TO FAXMAIL 01782 408420</v1:JobDescription>
+         <v1:JobDetails>PM - NAG - MONTHLY MMU MAINTENANCE PM SCOPE OF WORKS
+
+1 COMPLETE GSH RISK ASSESSMENT
+2 CHECK ASBESTOS REGISTER BEFORE CARRYING OUT ANY MAINTENANCE
+3 CARRY OUT MONTHLY MMU MAINTENANCE AS PER THE NAG MMU SCOPE OF WORKS
+4 TAKE ALL METER READINGS ELEC / GAS / WATER AND SEND THROUGH TO FAXMAIL 01782 408420
+
+PO 2999335 Updated to Status APPR on the 30/01/15 09:42 by 99991PO 2999335 Updated to Status APPR on the 30/01/15 09:42 by 99991Status updated to: APPR on the 23/01/15 20:45 by MAXADMINStatus updated to: WAPPR on the 15/01/15 18:56 by MAXADMIN</v1:JobDetails>
+         <v1:ClientRef/>
+         <v1:ScheduledStartDate>0001-01-01</v1:ScheduledStartDate>
+         <v1:ScheduledStartTime>00:00:00.0000000+01:00</v1:ScheduledStartTime>
+         <v1:ContractID>11322</v1:ContractID>
+         <v1:LocationID>113227</v1:LocationID>
+         <v1:LocationName>YORKSHIRE BANK - QUEENSBURY 58 HIGH STREET</v1:LocationName>
+         <v1:ClientLocationID/>
+         <v1:TargetStartDate>2015-02-15</v1:TargetStartDate>
+         <v1:TargetStartTime>00:00:00.0000000+01:00</v1:TargetStartTime>
+         <v1:Supplier>
+            <v1:SupplierName>CITY ELECTRICAL FACTORS LTD ( KEIGHLEY )</v1:SupplierName>
+            <v1:SupplierCategory/>
+            <v1:ContactDetails>Contact: Phone:01535 662568 Fax:01535 662537</v1:ContactDetails>
+            <v1:Address1>UNIT D</v1:Address1>
+            <v1:Address2>GRESLEY RD IND EST</v1:Address2>
+            <v1:County>KEIGHLEY</v1:County>
+            <v1:PostCode>BD21 5RN</v1:PostCode>
+         </v1:Supplier>
+         <v1:Supplier>
+            <v1:SupplierName>CITY ELECTRICAL FACTORS LTD (BRADFORD )</v1:SupplierName>
+            <v1:SupplierCategory/>
+            <v1:ContactDetails>Contact: Phone:01274739101 Fax:01274 739655</v1:ContactDetails>
+            <v1:Address1>UNIT B BOWLING BACK LANE IND ESTATE</v1:Address1>
+            <v1:Address2>BOWLING BACK LANE</v1:Address2>
+            <v1:County>BRADFORD</v1:County>
+            <v1:PostCode>BD4 8SH</v1:PostCode>
+         </v1:Supplier>
+         <v1:Supplier>
+            <v1:SupplierName>EDMUNDSON ELECTRICAL LIMITED (BRADFORD)</v1:SupplierName>
+            <v1:SupplierCategory/>
+            <v1:ContactDetails>Contact: Phone:01274 725715 Fax:01274 305492</v1:ContactDetails>
+            <v1:Address1>CHANDOS STREET</v1:Address1>
+            <v1:Address2>WAKEFIELD ROAD</v1:Address2>
+            <v1:County>BRADFORD</v1:County>
+            <v1:PostCode>BD4 7AY</v1:PostCode>
+         </v1:Supplier>
+         <v1:Supplier>
+            <v1:SupplierName>EDMUNDSON ELECTRICAL LIMITED (KEIGHLEY)</v1:SupplierName>
+            <v1:SupplierCategory/>
+            <v1:ContactDetails>Contact: Phone:01535 691111 Fax:01535 691358</v1:ContactDetails>
+            <v1:Address1>UNIT 3 KEIGHLEY INDUSTRIAL ESTATE</v1:Address1>
+            <v1:Address2>ROYD INGS AVENUE</v1:Address2>
+            <v1:County>KEIGHLEY</v1:County>
+            <v1:PostCode>BD21 4DZ</v1:PostCode>
+         </v1:Supplier>
+         <v1:Supplier>
+            <v1:SupplierName>HSS HIRE SERVICES (BRADFORD)</v1:SupplierName>
+            <v1:SupplierCategory/>
+            <v1:ContactDetails>Contact: Phone:01274 691286 Fax:0113 2407070</v1:ContactDetails>
+            <v1:Address1>101 HALIFAX ROAD</v1:Address1>
+            <v1:Address2/>
+            <v1:County>BRADFORD</v1:County>
+            <v1:PostCode>BD6 1JQ</v1:PostCode>
+         </v1:Supplier>
+         <v1:Supplier>
+            <v1:SupplierName>HSS HIRE SERVICES (WAKEFIELD RD-BRADFORD)</v1:SupplierName>
+            <v1:SupplierCategory/>
+            <v1:ContactDetails>Contact: Phone:01274 308055 Fax:01274 693516</v1:ContactDetails>
+            <v1:Address1>WAKEFIELD ROAD</v1:Address1>
+            <v1:Address2/>
+            <v1:County>BRADFORD</v1:County>
+            <v1:PostCode>BD4 7LX</v1:PostCode>
+         </v1:Supplier>
+         <v1:Supplier>
+            <v1:SupplierName>HSS HIRE SERVICES (KEIGHLEY)</v1:SupplierName>
+            <v1:SupplierCategory/>
+            <v1:ContactDetails>Contact: Phone:01535 690678 Fax:01484 432827</v1:ContactDetails>
+            <v1:Address1>56 SOUTH STREET</v1:Address1>
+            <v1:Address2/>
+            <v1:County>KEIGHLEY</v1:County>
+            <v1:PostCode>BD21 1DD</v1:PostCode>
+         </v1:Supplier>
+         <v1:Supplier>
+            <v1:SupplierName>NEWEY &amp; EYRE  (BRADFORD)</v1:SupplierName>
+            <v1:SupplierCategory/>
+            <v1:ContactDetails>Contact: Phone:01274 305646 Fax:01274 733097</v1:ContactDetails>
+            <v1:Address1>5 &amp; 7 RUTLAND STREET</v1:Address1>
+            <v1:Address2/>
+            <v1:County>BRADFORD</v1:County>
+            <v1:PostCode>BD4 7EA</v1:PostCode>
+         </v1:Supplier>
+         <v1:Supplier>
+            <v1:SupplierName>WF ELECTRICAL (KEIGHLEY)</v1:SupplierName>
+            <v1:SupplierCategory/>
+            <v1:ContactDetails>Contact: Phone:01535 607733 Fax:01535 610320</v1:ContactDetails>
+            <v1:Address1>UNIT 4 SPRING STREET</v1:Address1>
+            <v1:Address2>OFF LAWKHOLME LANE</v1:Address2>
+            <v1:County>KEIGHLEY- WEST YORKSHIRE</v1:County>
+            <v1:PostCode>BD21 3LE</v1:PostCode>
+         </v1:Supplier>
+         <v1:Supplier>
+            <v1:SupplierName>CONTROL CENTRE (BRADFORD)</v1:SupplierName>
+            <v1:SupplierCategory/>
+            <v1:ContactDetails>Contact: Phone:01274 395333 Fax:01274 395444</v1:ContactDetails>
+            <v1:Address1>UNIT 3 FOWLER ROAD</v1:Address1>
+            <v1:Address2>OFF WAKEFIELD ROAD</v1:Address2>
+            <v1:County>BRADFORD</v1:County>
+            <v1:PostCode>BD4 7NE</v1:PostCode>
+         </v1:Supplier>
+         <v1:Meters>
+            <v1:SerialNumber>01790</v1:SerialNumber>
+            <v1:ID>2170073</v1:ID>
+            <v1:Type>Electric</v1:Type>
+            <v1:Location>113227</v1:Location>
+            <v1:PreviousReading>52158</v1:PreviousReading>
+            <v1:Notes>NA</v1:Notes>
+            <v1:UpperReadingLimit>0</v1:UpperReadingLimit>
+            <v1:LowerReadingLimit>52158</v1:LowerReadingLimit>
+         </v1:Meters>
+         <v1:Meters>
+            <v1:SerialNumber>02381</v1:SerialNumber>
+            <v1:ID>2170074</v1:ID>
+            <v1:Type>Electric</v1:Type>
+            <v1:Location>113227</v1:Location>
+            <v1:PreviousReading>40200</v1:PreviousReading>
+            <v1:Notes>NA</v1:Notes>
+            <v1:UpperReadingLimit>0</v1:UpperReadingLimit>
+            <v1:LowerReadingLimit>40200</v1:LowerReadingLimit>
+         </v1:Meters>
+         <v1:Meters>
+            <v1:SerialNumber>05540</v1:SerialNumber>
+            <v1:ID>2170075</v1:ID>
+            <v1:Type>Electric</v1:Type>
+            <v1:Location>113227</v1:Location>
+            <v1:PreviousReading>48198</v1:PreviousReading>
+            <v1:Notes>NA</v1:Notes>
+            <v1:UpperReadingLimit>0</v1:UpperReadingLimit>
+            <v1:LowerReadingLimit>48198</v1:LowerReadingLimit>
+         </v1:Meters>
+         <v1:Meters>
+            <v1:SerialNumber>2964</v1:SerialNumber>
+            <v1:ID>2170076</v1:ID>
+            <v1:Type>Gas</v1:Type>
+            <v1:Location>113227</v1:Location>
+            <v1:PreviousReading>4071</v1:PreviousReading>
+            <v1:Notes>NA</v1:Notes>
+            <v1:UpperReadingLimit>0</v1:UpperReadingLimit>
+            <v1:LowerReadingLimit>4071</v1:LowerReadingLimit>
+         </v1:Meters>
+         <v1:Meters>
+            <v1:SerialNumber>bb63k-1790</v1:SerialNumber>
+            <v1:ID>2174778</v1:ID>
+            <v1:Type>Electric</v1:Type>
+            <v1:Location>113227</v1:Location>
+            <v1:PreviousReading>54418</v1:PreviousReading>
+            <v1:Notes>NA</v1:Notes>
+            <v1:UpperReadingLimit>0</v1:UpperReadingLimit>
+            <v1:LowerReadingLimit>54418</v1:LowerReadingLimit>
+         </v1:Meters>
+         <v1:Meters>
+            <v1:SerialNumber>12MA014081</v1:SerialNumber>
+            <v1:ID>2179003</v1:ID>
+            <v1:Type>Water</v1:Type>
+            <v1:Location>113227</v1:Location>
+            <v1:PreviousReading>128</v1:PreviousReading>
+            <v1:Notes>new meter</v1:Notes>
+            <v1:UpperReadingLimit>0</v1:UpperReadingLimit>
+            <v1:LowerReadingLimit>128</v1:LowerReadingLimit>
+         </v1:Meters>
+         <v1:Meters>
+            <v1:SerialNumber>262964s</v1:SerialNumber>
+            <v1:ID>2180876</v1:ID>
+            <v1:Type>Gas</v1:Type>
+            <v1:Location>113227</v1:Location>
+            <v1:PreviousReading>4202</v1:PreviousReading>
+            <v1:Notes>NA</v1:Notes>
+            <v1:UpperReadingLimit>0</v1:UpperReadingLimit>
+            <v1:LowerReadingLimit>4202</v1:LowerReadingLimit>
+         </v1:Meters>
+         <v1:Meters>
+            <v1:SerialNumber>9022</v1:SerialNumber>
+            <v1:ID>2180878</v1:ID>
+            <v1:Type>Water</v1:Type>
+            <v1:Location>113227</v1:Location>
+            <v1:PreviousReading>308</v1:PreviousReading>
+            <v1:Notes>NA</v1:Notes>
+            <v1:UpperReadingLimit>0</v1:UpperReadingLimit>
+            <v1:LowerReadingLimit>308</v1:LowerReadingLimit>
+         </v1:Meters>
+         <v1:Meters>
+            <v1:SerialNumber>07 009022</v1:SerialNumber>
+            <v1:ID>2182582</v1:ID>
+            <v1:Type>Water</v1:Type>
+            <v1:Location>113227</v1:Location>
+            <v1:PreviousReading>310</v1:PreviousReading>
+            <v1:Notes>NA</v1:Notes>
+            <v1:UpperReadingLimit>0</v1:UpperReadingLimit>
+            <v1:LowerReadingLimit>310</v1:LowerReadingLimit>
+         </v1:Meters>
+         <v1:Meters>
+            <v1:SerialNumber>bb64k02381</v1:SerialNumber>
+            <v1:ID>2182587</v1:ID>
+            <v1:Type>Electric</v1:Type>
+            <v1:Location>113227</v1:Location>
+            <v1:PreviousReading>40202</v1:PreviousReading>
+            <v1:Notes>NA</v1:Notes>
+            <v1:UpperReadingLimit>0</v1:UpperReadingLimit>
+            <v1:LowerReadingLimit>40202</v1:LowerReadingLimit>
+         </v1:Meters>
+         <v1:Meters>
+            <v1:SerialNumber>12ma014081</v1:SerialNumber>
+            <v1:ID>2183170</v1:ID>
+            <v1:Type>Water</v1:Type>
+            <v1:Location>113227</v1:Location>
+            <v1:PreviousReading>134</v1:PreviousReading>
+            <v1:Notes>NA</v1:Notes>
+            <v1:UpperReadingLimit>0</v1:UpperReadingLimit>
+            <v1:LowerReadingLimit>134</v1:LowerReadingLimit>
+         </v1:Meters>
+         <v1:Meters>
+            <v1:SerialNumber>2962964s</v1:SerialNumber>
+            <v1:ID>2183171</v1:ID>
+            <v1:Type>Gas</v1:Type>
+            <v1:Location>113227</v1:Location>
+            <v1:PreviousReading>4207</v1:PreviousReading>
+            <v1:Notes>NA</v1:Notes>
+            <v1:UpperReadingLimit>0</v1:UpperReadingLimit>
+            <v1:LowerReadingLimit>4207</v1:LowerReadingLimit>
+         </v1:Meters>
+         <v1:Meters>
+            <v1:SerialNumber>bb62k05540</v1:SerialNumber>
+            <v1:ID>2183172</v1:ID>
+            <v1:Type>Electric</v1:Type>
+            <v1:Location>113227</v1:Location>
+            <v1:PreviousReading>40323</v1:PreviousReading>
+            <v1:Notes>NA</v1:Notes>
+            <v1:UpperReadingLimit>0</v1:UpperReadingLimit>
+            <v1:LowerReadingLimit>40323</v1:LowerReadingLimit>
+         </v1:Meters>
+         <v1:Meters>
+            <v1:SerialNumber>bb63k01790</v1:SerialNumber>
+            <v1:ID>2183173</v1:ID>
+            <v1:Type>Electric</v1:Type>
+            <v1:Location>113227</v1:Location>
+            <v1:PreviousReading>68383</v1:PreviousReading>
+            <v1:Notes>NA</v1:Notes>
+            <v1:UpperReadingLimit>0</v1:UpperReadingLimit>
+            <v1:LowerReadingLimit>68383</v1:LowerReadingLimit>
+         </v1:Meters>
+         <v1:WOStatus>APPR</v1:WOStatus>
+         <v1:WOEquipmentNo>909512</v1:WOEquipmentNo>
+         <v1:ActionType>ADD</v1:ActionType>
+         <v1:System>MAX6TEST</v1:System>
+         <v1:AssetReference/>
+         <v1:AssetLocation/>
+         <v1:PlanCode>AHVAC35301M</v1:PlanCode>
+         <v1:PlanDesc>PM - NAG - MONTHLY MMU MAINTENANCE</v1:PlanDesc>
+         <v1:PlanInst>PM SCOPE OF WORKS
+
+1 COMPLETE GSH RISK ASSESSMENT
+2 CHECK ASBESTOS REGISTER BEFORE CARRYING OUT ANY MAINTENANCE
+3 CARRY OUT MONTHLY MMU MAINTENANCE AS PER THE NAG MMU SCOPE OF WORKS
+4 TAKE ALL METER READINGS ELEC / GAS / WATER AND SEND THROUGH TO FAXMAIL 01782 408420</v1:PlanInst>
+         <v1:TargetEndDate>2015-02-15</v1:TargetEndDate>
+         <v1:TargetEndTime>02:00:00.0000000+01:00</v1:TargetEndTime>
+         <v1:TargetStartDateSort>999</v1:TargetStartDateSort>
+         <v1:TargetEndDateSort>999</v1:TargetEndDateSort>
+         <v1:Task360>1</v1:Task360>
+         <v1:NoRiskAssRqd>1</v1:NoRiskAssRqd>
+         <v1:EstDurRqd>0</v1:EstDurRqd>
+         <v1:FailureCodeRqd>0</v1:FailureCodeRqd>
+         <v1:TaskNo>11498455</v1:TaskNo>
+         <v1:TaskDescription>PM - MONTHLY METER READINGS - SEE LONG DESCRIPTION</v1:TaskDescription>
+         <v1:TaskDescriptionLong>Carry out Gas/Water and Electric Meter Readings and Update the Meter Reading Screen in the Extra Info Box on the Job Screen</v1:TaskDescriptionLong>
+         <v1:CertReqInd>0</v1:CertReqInd>
+         <v1:AccessPermit/>
+      </v1:SendJob>
+   </soapenv:Body>
+</soapenv:Envelope>

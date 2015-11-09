@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.iss.com/operationalservices/external/sendmobdata/jobmessage/v1" xmlns:mstns="http://www.iss.com/operationalservices/external/sendmobdata/jobmessage/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.iss.com/operationalservices/external/sendmobdata/jobmessage/v1" id="SendMobData" elementFormDefault="qualified">
+  <xs:element name="JobId" type="JobIdType"/>
+  <xs:complexType name="JobIdType">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendJob" type="Job"/>
+  <xs:complexType name="Job">
+    <xs:sequence>
+      <xs:element name="UniqueRef" type="xs:string"/>
+      <xs:element name="LabourCode" type="xs:string"/>
+      <xs:element name="GroupingID" type="xs:string"/>
+      <xs:element name="Order" type="xs:string"/>
+      <xs:element name="Sent" type="xs:string"/>
+      <xs:element name="ID" type="xs:string"/>
+      <xs:element name="Email" type="xs:string"/>
+      <xs:element name="JobNo" type="xs:string"/>
+      <xs:element name="Sort" type="xs:string"/>
+      <xs:element name="Colour" type="xs:string"/>
+      <xs:element name="Priority" type="xs:string"/>
+      <xs:element name="JobDate" type="xs:date"/>
+      <xs:element name="JobTime" type="xs:time"/>
+      <xs:element name="Address1" type="xs:string"/>
+      <xs:element name="Address2" type="xs:string"/>
+      <xs:element name="Town" type="xs:string"/>
+      <xs:element name="County" type="xs:string"/>
+      <xs:element name="Postcode" type="xs:string"/>
+      <xs:element name="Client" type="xs:string"/>
+      <xs:element name="Contact" type="xs:string"/>
+      <xs:element name="Phone1" type="xs:string"/>
+      <xs:element name="Phone2" type="xs:string"/>
+      <xs:element name="Access" type="xs:string"/>
+      <xs:element name="JobType" type="xs:string"/>
+      <xs:element name="JobDescription" type="xs:string"/>
+      <xs:element name="JobDetails" type="xs:string"/>
+      <xs:element name="ClientRef" type="xs:string"/>
+      <xs:element name="ScheduledStartDate" type="xs:date"/>
+      <xs:element name="ScheduledStartTime" type="xs:time"/>
+      <xs:element name="ContractID" type="xs:string"/>
+      <xs:element name="LocationID" type="xs:string"/>
+      <xs:element name="LocationName" type="xs:string"/>
+      <xs:element name="ClientLocationID" type="xs:string"/>
+      <xs:element name="AllocatedBy" type="xs:string"/>
+      <xs:element name="TargetStartDate" type="xs:date"/>
+      <xs:element name="TargetStartTime" type="xs:time"/>
+      <xs:element name="Supplier" type="Supplier" maxOccurs="10"/>
+      <xs:element name="AssetSiteHistory" type="AssetSiteHistory" maxOccurs="3"/>
+      <xs:element name="Meters" type="Meters" maxOccurs="50"/>
+      <xs:element name="WOStatus" type="xs:string"/>
+      <xs:element name="WOEquipmentNo" type="xs:string"/>
+      <xs:element name="ActionType" type="xs:string"/>
+      <xs:element name="System" type="xs:string"/>
+      <xs:element name="AssetReference" type="xs:string" minOccurs="0"/>
+      <xs:element name="AssetLocation" type="xs:string" minOccurs="0"/>
+      <xs:element name="PlanCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="PlanDesc" type="xs:string" minOccurs="0"/>
+      <xs:element name="PlanInst" type="xs:string" minOccurs="0"/>
+      <xs:element name="TargetEndDate" type="xs:date" minOccurs="0"/>
+      <xs:element name="TargetEndTime" type="xs:time" minOccurs="0"/>
+      <xs:element name="TargetStartDateSort" type="xs:string" minOccurs="0"/>
+      <xs:element name="TargetEndDateSort" type="xs:string" minOccurs="0"/>
+      <xs:element name="Task360" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="NoRiskAssRqd" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="EstDurRqd" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="FailureCodeRqd" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="TaskNo" type="xs:string" minOccurs="0"/>
+      <xs:element name="TaskDescription" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="100"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="TaskDescriptionLong" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="1000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="CertReqInd" type="xs:string"/>
+      <xs:element name="AccessPermit" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Supplier">
+    <xs:sequence>
+      <xs:element name="SupplierName" type="xs:string"/>
+      <xs:element name="SupplierCategory" type="xs:string"/>
+      <xs:element name="ContactDetails" type="xs:string"/>
+      <xs:element name="Address1" type="xs:string"/>
+      <xs:element name="Address2" type="xs:string"/>
+      <xs:element name="Town" type="xs:string"/>
+      <xs:element name="County" type="xs:string"/>
+      <xs:element name="PostCode" type="xs:string"/>
+      <xs:element name="LatLong" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AssetSiteHistory">
+    <xs:sequence>
+      <xs:element name="HistoryType" type="xs:string"/>
+      <xs:element name="HistoryText" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Meters">
+    <xs:sequence>
+      <xs:element name="SerialNumber" type="xs:string"/>
+      <xs:element name="ID" type="xs:integer"/>
+      <xs:element name="Type" type="xs:string"/>
+      <xs:element name="Location" type="xs:string"/>
+      <xs:element name="PreviousReading" type="xs:double"/>
+      <xs:element name="Notes" type="xs:string"/>
+      <xs:element name="UpperReadingLimit" type="xs:double"/>
+      <xs:element name="LowerReadingLimit" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
