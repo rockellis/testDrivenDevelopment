@@ -16,14 +16,29 @@ describe('Test business logic module', function () {
     });
 
     // TODO: Call businessLogic.countUsers and assert that the number of users is what is expected
+    businessLogic.countUsers(function (err, count) {
+      assert.equal(count, 3, 'Users are not the expected number');
+      done();
+    });
 
   });
 
   it('should throw an err from businesLogic ', function (done) {
 
     // TODO: Mock the .dal dependancy. Return an error from the list function.
+    var businessLogic = proxyquire('../../lib/businessLogic', {
+      './dal': {
+        list: function (col, restrictions, cb) {
+          cb(new Error('Problem reading database.'));
+        }
+      }
+    });
 
     // TODO: Call businessLogic.countUsers and assert that an error was returned
+    businessLogic.countUsers(function (err, count) {
+      assert.notEqual(err, null, 'Expected an error to be thrown');
+      done();
+    });
 
   });
 
