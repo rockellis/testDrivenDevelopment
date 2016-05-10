@@ -3,9 +3,9 @@
 var assert = require('assert'),
   calculator = require('../../lib/calculator');
 
-describe('Test my node.js app ', function() {
+describe('Test my node.js app ', function () {
 
-  it('should add the array of numbers ', function(done) {
+  it('should add the array of numbers ', function (done) {
 
     var result = calculator.add([1, 2, 3, 4, 5]);
 
@@ -13,7 +13,7 @@ describe('Test my node.js app ', function() {
     done();
   });
 
-  it('should subtract the numbers correctly ', function(done) {
+  it('should subtract the numbers correctly ', function (done) {
 
     var result = calculator.subtract(10, 5);
 
