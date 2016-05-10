@@ -3,7 +3,7 @@
 var assert = require('assert'),
   calculator = require('../../lib/calculator');
 
-describe('Test my node.js app ', function () {
+describe('Test my simple calculator ', function () {
 
   it('should add the array of numbers ', function (done) {
 

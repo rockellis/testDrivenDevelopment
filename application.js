@@ -36,6 +36,8 @@ if (process.env['FH_USE_LOCAL_DB']) {
   app.use('/box/srv/1.1/app/init', require('./lib/localInit.js')());
 }
 
+app.use('/', require('./lib/usersRoute.js')());
+
 // fhlint-end
 
 // Important that this is last!
@@ -47,7 +49,7 @@ process.env.FH_PORT = port;
 
 // process.env.FH_USE_LOCAL_DB = true;
 
-var server = app.listen(port, host, function() {
+var server = app.listen(port, host, function () {
   console.log("App started at: " + new Date() + " on port: " + port);
   events.emit(events.emittedEvents.fhReady, server);
 });

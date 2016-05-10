@@ -3,22 +3,25 @@
 var assert = require('assert'),
   utils = require('../testUtils');
 
-before(function(done) {
-  utils.startServer(true, function() {
+before(function (done) {
+  // Start the node server
+  utils.startServer(true, function () {
     done();
   });
 });
 
-describe('Test wall unit routing module ', function() {
+describe('Test users routing module ', function () {
 
-  it('should something ', function(done) {
+  it('should return the correct number of users ', function (done) {
 
-    utils.cloudCall('/cloud/getUsersCount', null, function(err, result) {
+    utils.cloudGet('/getUsersCount', null, function (err, result) {
 
-      console.log('back from cloud call');
-
+      assert.equal(result.numUsers, 0, "Number of Users is not as expected");
       done();
     });
   });
+
+  // TODO: add a test that send a user to the cloud app and then verify that
+  // there is exactly 1 user in the DB
 
 });

@@ -3,39 +3,27 @@
 var assert = require('assert'),
   proxyquire = require('proxyquire');
 
-describe('Test wall unit routing module ', function() {
+describe('Test business logic module', function () {
 
-  it('should return businessLogic countUsers based on mock data', function(done) {
+  it('should return businessLogic countUsers based on mock data', function (done) {
 
     var businessLogic = proxyquire('../../lib/businessLogic', {
       './dal': {
-        list: function(col, restrictions, cb) {
-          console.log('In mock dal list');
+        list: function (col, restrictions, cb) {
           cb(null, users);
         }
       }
     });
 
-    businessLogic.countUsers(function(err, count) {
-      assert.equal(count, 3, 'Users are not the expected number');
-      done();
-    });
+    // TODO: Call businessLogic.countUsers and assert that the number of users is what is expected
+
   });
 
-  it('should throw an err from businesLogic ', function(done) {
+  it('should throw an err from businesLogic ', function (done) {
 
-    var businessLogic = proxyquire('../../lib/businessLogic', {
-      './dal': {
-        list: function(col, restrictions, cb) {
-          cb(new Error('Problem reading database.'));
-        }
-      }
-    });
+    // TODO: Mock the .dal dependancy. Return an error from the list function.
 
-    businessLogic.countUsers(function(err, count) {
-      assert.notEqual(err, null, 'Expected an error to be thrown');
-      done();
-    });
+    // TODO: Call businessLogic.countUsers and assert that an error was returned
 
   });
 
